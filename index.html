@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Aboubacar HEMA">
+<meta name="description" content="Research and data science projects by Aboubacar HEMA (IFPRI / CGIAR): food security, public health surveillance, Earth observation and spatial statistics in Africa.">
+<title>Aboubacar HEMA Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ee; --surface:#ffffff; --ink:#14201b; --muted:#5b6862; --line:#e2ded3;
+  --accent:#1f7a5a; --accent-ink:#ffffff; --deep:#0b3d2e; --chip:#e8f1ec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1714; --surface:#16211c; --ink:#e9efe9; --muted:#9aaba3; --line:#26332d;
+    --accent:#4cbf8f; --accent-ink:#0b1712; --deep:#0b3d2e; --chip:#1d2c25;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1714; --surface:#16211c; --ink:#e9efe9; --muted:#9aaba3; --line:#26332d;
+  --accent:#4cbf8f; --accent-ink:#0b1712; --deep:#0b3d2e; --chip:#1d2c25;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header.hero{background:var(--deep);color:#fff;padding:56px 0 48px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);margin:0 0 6px;letter-spacing:-.01em}
+.hero .role{opacity:.85;margin:0 0 18px}
+.hero p.lead{max-width:720px;margin:0 0 22px;opacity:.92}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{text-decoration:none;font-size:.9rem;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.35)}
+.links a:hover{background:rgba(255,255,255,.12)}
+.links a.primary{background:#fff;color:var(--deep);border-color:#fff;font-weight:600}
+main{padding:36px 0 56px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:inherit;font-size:.88rem;cursor:pointer;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.count{color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.theme{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600}
+.card h2{font-family:Fraunces,Georgia,serif;font-size:1.3rem;margin:0;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.fact{font-size:.88rem;color:var(--ink)}
+.fact b{color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{background:var(--chip);font-size:.78rem;padding:3px 9px;border-radius:6px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 14px;border-radius:8px;background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.all{text-align:center;margin-top:34px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:22px 0}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>Aboubacar HEMA</h1>
+    <p class="role">Research Analyst &amp; Data Scientist · IFPRI / CGIAR · Dakar, Senegal</p>
+    <p class="lead">Reproducible pipelines and tools that turn household surveys, disease surveillance, satellite imagery and conflict data into evidence for food security and humanitarian decisions in the Sahel and Sub-Saharan Africa.</p>
+    <nav class="links">
+      <a class="primary" href="https://github.com/Abson-dev">GitHub profile</a>
+      <a href="https://www.ifpri.org/profile/aboubacar-hema/">IFPRI</a>
+      <a href="https://scholar.google.com/citations?user=owTdwCYAAAAJ&hl=en">Google Scholar</a>
+      <a href="https://orcid.org/0000-0001-9756-7270">ORCID</a>
+      <a href="https://www.linkedin.com/in/aboubacar-hema-2768b7148/">LinkedIn</a>
+      <a href="mailto:a.hema@cgiar.org">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="bar">
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="food">Food security</button>
+      <button data-f="health">Health surveillance</button>
+      <button data-f="eo">Earth observation</button>
+      <button data-f="pov">Poverty &amp; conflict</button>
+      <button data-f="ai">AI agents</button>
+      <button data-f="teach">Teaching</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+
+  <section class="grid" id="grid">
+
+    <article class="card" data-t="food">
+      <span class="theme">Food security · Survey harmonisation</span>
+      <h2>ENSA Chad harmonisation</h2>
+      <p>Config-driven, tested workflow that harmonises Chad's national food security survey rounds into comparable thematic datasets, recomputes indicators and validates them against the original analysts' scores.</p>
+      <div class="fact"><b>14 rounds</b> · Oct 2018 to Oct 2025 · <b>197,947 households</b></div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ensa-chad-harmonization">View project</a></div>
+      <div class="tags"><span>Python</span><span>R Shiny</span><span>Stata</span><span>FCS · rCSI · LCS</span></div>
+    </article>
+
+    <article class="card" data-t="health">
+      <span class="theme">Health surveillance · Impact evaluation</span>
+      <h2>Ituri epidemiological situation (DRC)</h2>
+      <p>R pipeline on weekly IDSR data: automated epidemiological bulletin, French-language dashboard (malaria, Ebola, data quality) and a controlled interrupted time series across health zones. Runs end to end on synthetic demo data.</p>
+      <div class="fact"><b>36 health zones</b> · CITS design · <code>run_all.R --demo</code></div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ituri-situation-epidemiologique">View project</a></div>
+      <div class="tags"><span>R</span><span>renv</span><span>Shiny</span><span>MIT</span></div>
+    </article>
+
+    <article class="card" data-t="health">
+      <span class="theme">Health surveillance · Forecasting</span>
+      <h2>Niger notifiable diseases dashboard</h2>
+      <p>Ten years of weekly notifiable disease reports cleaned, validated against source totals and served in a Shiny dashboard with meningitis alert thresholds, reporting completeness and a DHIS2 comparison, plus count and endemic-epidemic models.</p>
+      <div class="fact"><b>2015 to 2024</b> · negative binomial · hurdle · endemic-epidemic</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/msf-mdo-niger">View project</a></div>
+      <div class="tags"><span>R Shiny</span><span>Python</span><span>IDSR</span></div>
+    </article>
+
+    <article class="card" data-t="eo">
+      <span class="theme">Earth observation · Ecology</span>
+      <h2>sdmApp</h2>
+      <p>R package and Shiny app that makes species distribution modelling accessible to non-programmers, with spatially blocked cross-validation, predictor screening and export of the generated R code. Example data: agroforestry trees in Niakhar, Senegal.</p>
+      <div class="fact"><b>blockCV</b> · <b>CENFA</b> · MaxEnt and other SDMs</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/sdmApp">View project</a></div>
+      <div class="tags"><span>R package</span><span>Shiny</span><span>GPL-3</span></div>
+    </article>
+
+    <article class="card" data-t="eo food">
+      <span class="theme">Earth observation · Agricultural land</span>
+      <h2>Productive agricultural land (IFPRI)</h2>
+      <p>Google Earth Engine workflow mapping arable land by combining cropland extent and cleared forest, then masking steep slopes, permanent water and impervious surfaces. One script per country.</p>
+      <div class="fact"><b>30 m</b> resolution · NASA GFSAD 2015 · slope mask &gt;15%</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/-IFPRI--Calculate-Productive-Agriculture">View project</a></div>
+      <div class="tags"><span>Earth Engine</span><span>Jupyter</span><span>Africa</span></div>
+    </article>
+
+    <article class="card" data-t="teach eo">
+      <span class="theme">Teaching · Spatial data science</span>
+      <h2>Exploratory spatial statistics course</h2>
+      <p>Eleven practical sessions taught at ENSAE Dakar: raster and vector data, zonal statistics, risk mapping with WorldPop and ACLED, spatial autocorrelation, species distribution models and Sentinel-2 indices.</p>
+      <div class="fact"><b>11 practicals</b> · in French · CC BY 4.0</div>
+      <div class="actions">
+        <a class="btn" href="https://statistique-exploratoire-spatiale.vercel.app">Course website</a>
+        <a class="btn ghost" href="https://github.com/Abson-dev/Statistique-Exploratoire-Spatiale">Code</a>
+      </div>
+      <div class="tags"><span>Python</span><span>R</span><span>GEE</span><span>Stata</span></div>
+    </article>
+
+    <article class="card" data-t="ai food">
+      <span class="theme">AI agent · Food security surveys</span>
+      <h2>ENSA data assistant</h2>
+      <p>Ask in English or French how Chad's 14 ENSA rounds were harmonised and what they show. Read-only tools trace any variable across rounds, explain recodes and quality checks, and compare indicators by round, region and sex of the household head. No household record reaches the model.</p>
+      <div class="fact"><b>15 tools</b> · <b>58 indicators</b> · small cells suppressed</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ensa-chad-data-assistant">View project</a><a class="btn ghost" href="https://github.com/Abson-dev/ensa-chad-harmonization">Pipeline</a></div>
+      <div class="tags"><span>Python</span><span>Claude tool use</span><span>Web app</span><span>CI tests</span></div>
+    </article>
+
+    <article class="card" data-t="ai health">
+      <span class="theme">AI agent · Disease surveillance</span>
+      <h2>MDO Niger assistant</h2>
+      <p>Plain-language questions on Niger's weekly notifiable disease surveillance, answered with tables, charts, maps and CSV. The tools enforce epidemiological rules: like-for-like year comparisons, missing reports never read as zero, case-definition changes always flagged.</p>
+      <div class="fact"><b>19 tools</b> · meningitis thresholds · model estimates with CIs</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/mdo-niger-assistant">View project</a><a class="btn ghost" href="https://github.com/Abson-dev/msf-mdo-niger">Pipeline</a></div>
+      <div class="tags"><span>Python</span><span>Claude tool use</span><span>Maps</span><span>Skill</span></div>
+    </article>
+
+    <article class="card" data-t="ai health">
+      <span class="theme">AI agent · Epidemiological surveillance</span>
+      <h2>Ituri assistant</h2>
+      <p>Question-and-answer agent on Ituri's IDSR data, packaged as a Claude Code skill. Indicators come from the R pipeline, never from the model, with a parity test against the pipeline. Real data stay locked until a written data-sharing agreement exists. Work in progress.</p>
+      <div class="fact"><b>30-question</b> evaluation · answers computed independently in R</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ituri-assistant">View project</a><a class="btn ghost" href="https://github.com/Abson-dev/ituri-situation-epidemiologique">Pipeline</a></div>
+      <div class="tags"><span>Python stdlib</span><span>R</span><span>Claude Code skill</span></div>
+    </article>
+
+    <article class="card" data-t="ai food">
+      <span class="theme">AI venture · Food security</span>
+      <h2>FAYAMA.AI</h2>
+      <p>AI startup building decision tools for food security, poverty targeting and agricultural transformation in Africa, combining satellite data, household surveys and machine learning.</p>
+      <div class="fact"><b>19 languages</b> · Earth observation · ML for targeting</div>
+      <div class="actions"><a class="btn" href="https://fayama-ai.netlify.app/">Visit website</a></div>
+      <div class="tags"><span>AI</span><span>Earth observation</span><span>Startup</span></div>
+    </article>
+
+    <article class="card" data-t="food">
+      <span class="theme">Shocks · Coping strategies</span>
+      <h2>Household coping with shocks, Burkina Faso</h2>
+      <p>How households respond to conflict, climate and price shocks, using eleven waves of cross-sectional survey data linked to an extensive set of external shock indicators.</p>
+      <div class="fact"><b>11 waves</b> · 2019 to 2023</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ANALYZE-COPING-STRATEGY-BURKINA-FASO">View project</a></div>
+      <div class="tags"><span>Stata</span><span>Household surveys</span></div>
+    </article>
+
+    <article class="card" data-t="food">
+      <span class="theme">Shocks · Coping strategies</span>
+      <h2>Household coping with shocks, Mali</h2>
+      <p>Companion analysis for Mali, using association rule mining to identify which coping strategies households combine under different shocks and stressors.</p>
+      <div class="fact"><b>2018 to 2023</b> · association rules</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ANALYZE-COPING-STRATEGY-MALI">View project</a></div>
+      <div class="tags"><span>R</span><span>arules</span></div>
+    </article>
+
+    <article class="card" data-t="pov eo">
+      <span class="theme">Conflict · Spatial indicators</span>
+      <h2>Political violence in the G5 Sahel</h2>
+      <p>ACLED's conflict diffusion indicator implemented in Earth Engine: share of populated 10 km cells with high violence, from WorldPop and ACLED, with sensitivity analysis on thresholds. Prepared for WFP.</p>
+      <div class="fact"><b>10 km grid</b> · admin 2 · threshold sensitivity</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/Political-Violence-in-the-G5-Sahel-Countries">View project</a></div>
+      <div class="tags"><span>Earth Engine</span><span>ACLED</span><span>WorldPop</span></div>
+    </article>
+
+    <article class="card" data-t="pov">
+      <span class="theme">Poverty mapping · Small area estimation</span>
+      <h2>Small area poverty estimation</h2>
+      <p>Poverty headcount below the survey's representative levels, comparing direct, Fay-Herriot and machine learning estimates with conflict and climate covariates. Series for six West African countries.</p>
+      <div class="fact"><b>EHCVM 2021</b> · provinces and communes</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/Application-of-Fay-Herriot-Model-for-Burkina-Faso">Burkina Faso</a><a class="btn ghost" href="https://github.com/Abson-dev/Application-of-Fay-Herriot-Model-for-Senegal">Senegal</a></div>
+      <div class="tags"><span>R</span><span>Fay-Herriot</span><span>XGBoost</span></div>
+    </article>
+
+    <article class="card" data-t="food">
+      <span class="theme">Food systems · Data engineering</span>
+      <h2>Kenya soil, food, nutrition and policy database</h2>
+      <p>Provenance-tracked pipeline assembling sources on geography, soil, food, health and policy into one database keyed on a county crosswalk, for soil-to-nutrition pathway analysis.</p>
+      <div class="fact"><b>30 sources</b> · <b>5 layers</b> · full provenance ledger</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/kenya-fnp-db">View project</a></div>
+      <div class="tags"><span>Python</span><span>Database</span></div>
+    </article>
+
+    <article class="card" data-t="eo food">
+      <span class="theme">Earth observation · Agriculture</span>
+      <h2>Field boundaries for Burkina Faso</h2>
+      <p>Guide to replicating the Fields of The World 10 m field boundary map for Burkina Faso: Sentinel-2 mosaics, PRUE U-Net inference, polygon extraction and confidence filtering.</p>
+      <div class="fact"><b>10 m</b> · Sentinel-2 · replication guide</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ftw-burkina-faso">View project</a></div>
+      <div class="tags"><span>Sentinel-2</span><span>Deep learning</span></div>
+    </article>
+
+    <article class="card" data-t="teach">
+      <span class="theme">Teaching · Training</span>
+      <h2>Excel training for IFDC</h2>
+      <p>Training material prepared for the International Fertilizer Development Center on data handling and analysis in Excel.</p>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/Formation-Excel-IFDC">View project</a></div>
+      <div class="tags"><span>Excel</span><span>Training</span></div>
+    </article>
+
+    <article class="card" data-t="teach">
+      <span class="theme">Teaching · Statistics software</span>
+      <h2>Introduction to SPSS</h2>
+      <p>Introductory SPSS course material in French, prepared at ENSAE Dakar for students starting with statistical software.</p>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/SPSS">View project</a></div>
+      <div class="tags"><span>SPSS</span><span>French</span></div>
+    </article>
+
+  </section>
+
+  <div class="all"><a class="btn ghost" href="https://github.com/Abson-dev?tab=repositories&type=source">Browse all repositories on GitHub</a></div>
+</main>
+
+<footer>
+  <div class="wrap">Where microdata belong to governments or partners, code is public and data are available from the data owners on request. © Aboubacar HEMA</div>
+</footer>
+
+<script>
+const btns=[...document.querySelectorAll('.filters button')];
+const cards=[...document.querySelectorAll('.card')];
+const count=document.getElementById('count');
+function apply(f){
+  let n=0;
+  cards.forEach(c=>{const show=f==='all'||c.dataset.t.split(' ').includes(f);c.style.display=show?'':'none';if(show)n++;});
+  btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));
+  count.textContent=n+(n===1?' project':' projects');
+}
+btns.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.f)));
+apply('all');
+</script>
+</body>
+</html>
