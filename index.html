@@ -44,6 +44,7 @@ main.wrap{padding:36px 16px 56px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.new{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:.68rem;letter-spacing:.04em;vertical-align:1px}
 .theme{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600}
 .card h2{font-family:Fraunces,Georgia,serif;font-size:1.3rem;margin:0;line-height:1.25}
 .card p{margin:0;color:var(--muted);font-size:.95rem}
@@ -84,6 +85,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padd
       <button data-f="eo">Earth observation</button>
       <button data-f="pov">Poverty &amp; conflict</button>
       <button data-f="ai">AI agents</button>
+      <button data-f="tools">Data collection</button>
       <button data-f="teach">Teaching</button>
     </div>
     <span class="count" id="count"></span>
@@ -202,6 +204,33 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padd
       <div class="tags"><span>R</span><span>Stata</span><span>Shiny</span><span>Dataverse</span></div>
     </article>
 
+    <article class="card" data-t="health">
+      <span class="theme">Outbreak epidemiology · Health surveillance <span class="new">New</span></span>
+      <h2>Ebola Bundibugyo response, Mongbwalu (DRC)</h2>
+      <p>Reproducible pipeline for the MSF Ebola treatment centre in Mongbwalu, Ituri: weekly sitrep, line-list analysis report, daily data quality checklist and DHIS2 analyses (epidemic curves, transmission chains, Rt). Patient data stay on the analyst's machine; CI runs on synthetic data. Code © MSF OCG.</p>
+      <div class="fact"><b>Weekly sitrep</b> · daily QA · Rt · tested in CI</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ebola-mongbwalu-drc">View project</a></div>
+      <div class="tags"><span>R</span><span>Quarto</span><span>DHIS2</span></div>
+    </article>
+
+    <article class="card" data-t="pov eo">
+      <span class="theme">Conflict · Climate · Spatial exposure <span class="new">New</span></span>
+      <h2>DRC conflict, climate and population exposure</h2>
+      <p>Exposure measures for survey clusters (10, 25 and 50 km) and the 519 Admin 3 units of the DRC: ACLED conflict events, WorldPop population and age-sex structure, and ERA5-Land temperature anomalies, validated against UCDP GED. Outputs in CSV and Stata.</p>
+      <div class="fact"><b>1997 to 2025</b> · 519 Admin 3 units · 43,275 events</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/drc-conflict-climate-exposure">View project</a></div>
+      <div class="tags"><span>Python</span><span>ACLED</span><span>ERA5-Land</span><span>WorldPop</span></div>
+    </article>
+
+    <article class="card" data-t="food">
+      <span class="theme">Food systems · Labour · Data acquisition <span class="new">New</span></span>
+      <h2>Agrifood employment baseline, 17 countries</h2>
+      <p>Data acquisition for the Mastercard Foundation agrifood scenarios study with IFPRI: a verified source matrix and access register for labour force and household surveys, with scripts that validate the register, build the Excel deliverables and keep microdata out of the repository.</p>
+      <div class="fact"><b>17 countries</b> · LFS and EHCVM · in progress</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/mcf-agrifood-scenarios-study">View project</a></div>
+      <div class="tags"><span>Python</span><span>World Bank MDL</span><span>CI</span></div>
+    </article>
+
     <article class="card" data-t="food">
       <span class="theme">Shocks · Coping strategies</span>
       <h2>Household coping with shocks, Burkina Faso</h2>
@@ -254,6 +283,24 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padd
       <div class="fact"><b>10 m</b> · Sentinel-2 · replication guide</div>
       <div class="actions"><a class="btn" href="https://github.com/Abson-dev/ftw-burkina-faso">View project</a></div>
       <div class="tags"><span>Sentinel-2</span><span>Deep learning</span></div>
+    </article>
+
+    <article class="card" data-t="tools">
+      <span class="theme">Data collection · Offline-first <span class="new">New</span></span>
+      <h2>Africa data collection platform</h2>
+      <p>Field data collection for low-connectivity areas, built by extending ODK: ODK Central hosted in Africa on AWS, a branded ODK Collect and an encrypted SMS fallback. The SMS codec and bridge service are built and tested; infrastructure is written but not yet deployed.</p>
+      <div class="fact"><b>Phase 1</b> · SMS fallback · Terraform</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/africa-data-collection-platform">View project</a></div>
+      <div class="tags"><span>Kotlin</span><span>ODK</span><span>AWS</span></div>
+    </article>
+
+    <article class="card" data-t="tools">
+      <span class="theme">Survey supervision · Senegal</span>
+      <h2>Beehive census fieldwork monitoring (ANSD)</h2>
+      <p>Supervision tools for the ANSD beehive productivity survey collected with Survey Solutions: fieldwork progress by day, region and enumerator, consistency checks, and a ready-to-use list of interviews to reject. R Shiny and Python versions give identical results.</p>
+      <div class="fact"><b>39 checks</b> · rejection list · in French</div>
+      <div class="actions"><a class="btn" href="https://github.com/Abson-dev/suivi-collecte-ruches-ansd">View project</a></div>
+      <div class="tags"><span>R Shiny</span><span>Python</span><span>Survey Solutions</span></div>
     </article>
 
     <article class="card" data-t="teach">
